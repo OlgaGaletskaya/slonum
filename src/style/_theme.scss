@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700;800;900&display=swap');
+@import '../fonts/Rubik/rubik.css';
+
+$mainColor: #1F1D2A;
+$additionalColor : #4F5569;
+$mainAccentColor: #14A76C;
+$additionalAccentColor : #FF652F;
+$secondAdditionalAccentColor : #E02D05;
+
+
+@mixin headersFont ($fw, $fz, $lh, $ls){
+    font-family: 'Nunito Sans', sans-serif;
+    font-style: normal;
+    font-weight: $fw;
+    font-size: $fz;
+    line-height: $lh;
+    letter-spacing: $ls;
+}
+@mixin mainFont ($fw, $fz, $lh, $ls){
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: $fw;
+    font-size: $fz;
+    line-height: $lh;
+    letter-spacing: $ls;
+}
+
+
+.btn2 {
+    padding: 10px;
+    width: 180px;
+    height: 44px;
+    background: #FFFFFF;
+    border: 1px solid $mainColor;
+    border-radius: 15px;
+}
+
+.btn {
+    background: $mainAccentColor;
+    box-shadow: 0px 15px 30px rgba(25, 218, 140, 0.25);
+    border-radius: 15px;
+    padding: 18px 0;
+    width: 300px;
+    @include mainFont(700, 20px, 24px,  0.04em);
+    text-align: center;
+    color: #FFFFFF;
+} 

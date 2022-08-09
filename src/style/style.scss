@@ -1,0 +1,96 @@
+@import "_reset";
+@import "_theme";
+@import "_mixins";
+
+@import "../components/main/_main";
+@import '../components/description/description';
+@import '../components/benefits/benefits';
+@import '../components/Plan/plan';
+@import '../components/diplom/diplom';
+@import '../components/request/request';
+@import '../components/faq/faq';
+@import '../components/mail/mail';
+@import '../components/footer/footer';
+
+@mixin row{
+    display: flex;
+    flex-direction: row;
+}
+@mixin row-sb {
+    display: flex;
+    justify-content: space-between;    
+}
+@mixin col{
+    display: flex;
+    flex-direction: column;
+}
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+@mixin card{
+    background: #FFFFFF;
+    box-shadow: 0px 5px 30px rgba(215, 211, 225, 0.5);
+    border-radius: 16px;
+}
+.container{
+    width: 1400px;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+
+
+.title{
+    @include headersFont(700, 32px, 44px, 0.04em);
+    & span {
+        position: relative;
+        background-image: url('/public/img/underline.svg');
+        background-repeat-y: no-repeat;
+        background-position-y: bottom;
+    }
+}
+
+.columns{
+    @include row-sb();
+    max-width: 1400px;
+    margin: 0 auto;
+}
+.col2{
+    width: 50%;
+    align-items: center;
+}
+
+.checkbox{
+    position: relative;
+    width: 483px;
+
+&__chbx{
+    -webkit-appearance: none;
+    appearance: none;
+    position: absolute;
+    background: #FFFFFF;
+    border: 1.5px solid $mainAccentColor;
+    width: 18px;
+    height: 18px;
+}
+&__btn{
+    background-color: $secondAdditionalAccentColor;
+}
+&__lbl{
+    @include mainFont(400, 15px, 18px, 0.04em);
+    padding-left: 30px;
+}
+&__lbl a{
+    font-weight: 700;
+    text-decoration: underline;
+
+}
+&__chbx:checked{
+    background: $mainAccentColor url(https://htmlbase.ru/storage/app/media/checkbox/check.svg) no-repeat;
+    background-position: 2px 1px;
+    background-size: 12px 12px
+
+}
+}

@@ -1,0 +1,375 @@
+.header{
+    position: absolute;
+    width: 100%;
+    padding: 30px 0;
+    z-index: 2;
+    &__inner{
+      @include flex($jc:space-between);
+    }
+    &__logo{
+      @include flex($jc:space-between, $ai:center);
+      @include mainFont(400, 35px, 40px, 1);
+    }
+    &__logo span{
+      color: $additionalAccentColor;
+    }
+}
+
+.main{
+    position: relative;
+    &__inner{
+        width: 653px;
+        @include flex($fd:column);
+        padding-top: 328px;
+    }
+    &__subtitle{
+      @include mainFont(400, 15px, 166%, 0.08em);
+      text-transform: uppercase;
+      color: #9FA0A7;
+    }
+    &__title{
+      @include headersFont(700, 55px, 122%, 1);
+    }
+    &__cont{
+        @include mainFont(400, 18px, 150%, 0.05em);
+        margin-top: 40px;
+        margin-bottom: 60px;
+    }
+    &__action {
+      @include flex($jc:space-between); 
+      width: 100%;
+    }
+}
+
+.timer{
+  @include flex($fd:column);
+    gap: 4px;
+    width: 244px;
+    position: relative;
+    &::after {
+      content: 'по МСК';
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -45px;
+      color: $additionalColor;
+  }
+    &__time{
+      @include flex($ai:center, $jc:space-between);
+      @include headersFont(900, 24px, 33px, 1);
+    }
+    &__subtxt{
+        @include flex($jc:space-between);
+    }
+    &__item{
+        @include card();
+        color: $additionalAccentColor;
+        @include headersFont(700, 32px, 38px, 0.04em);
+        width: 70px;
+        height: 60px;
+        @include flex($ai:center, $jc:center);
+        position: relative;
+    }
+    &__item p {
+      position: absolute;
+      bottom: -25px;
+      left: 50%;
+      transform: translateX(-50%);
+      text-transform: none;
+      @include mainFont(400, 16px, 22px, 0.04em);
+      color: $mainColor;
+      
+    }
+}
+
+.animatedImage {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    height: 693px;
+    width: 864px;
+    border-radius: 0px;
+  
+    &__space {
+      position: relative;
+      
+    --animate-duration: 1.5s;
+    --animate-delay: 0.5s;
+    }
+  
+    &__space-background {
+      position: absolute;
+    }
+  
+    &__stars {
+      position: absolute;
+      top: 14px;
+      right: 43px;
+    }
+  
+    &__airplane {
+      position: absolute;
+      top: 329px;
+      right: 30px;
+      animation: airplane 12s ease-in-out infinite;
+      transform: scale(50%);
+      animation-direction: alternate;
+    }
+    @keyframes airplane {
+      0% {
+          transform: rotate(0);
+      }
+      50% {
+          transform: scale(100%);
+      }
+      100% {
+          transform: scale(50%) rotate(45deg);
+      }
+  }
+  
+    &__elephant {
+      position: absolute;
+      top: 225px;
+      right: 156px;
+      animation: elephant 6s ease-in-out infinite;
+      animation-direction: alternate;
+  }
+  @keyframes elephant {
+      to {
+          transform: rotate(30deg) translateX(-10px);
+      }
+  }
+  
+    &__clock {
+      position: absolute;
+      top: 220px;
+      left: 118px;
+      animation: clock 12s ease-in-out infinite;
+        transform: scale(70%);
+      }
+      @keyframes clock {
+        50% {
+          transform: scale(100%) rotate(-180deg);
+        }
+        100% {
+          transform: scale(70%) rotate(-360deg);
+        }
+      }
+  
+    &__bulb {
+      position: absolute;
+      top: 327px;
+      left: 464px;
+      animation: bulb 10.7s ease-in-out 1.3s infinite;
+      animation-direction: alternate;
+      }
+      @keyframes bulb {
+        45% {
+          transform: rotate(40deg);
+        }
+        78% {
+          transform: rotate(-45deg);
+        }
+        100% {
+          transform: rotate(-25deg);
+        }
+      }
+  
+    &__big-planet {
+      position: absolute;
+      top: 82px;
+      left: 209px;
+      animation: bigPlanet 6s ease-in-out infinite;
+      animation-direction: alternate;
+    }
+    @keyframes bigPlanet {
+      to {
+        transform: translate(-50px, 20px);
+      }
+    }
+    
+    &__striped-planet {
+      position: absolute;
+      top: 134px;
+      left: 427px;
+      animation: smallPlanet 6s ease-in-out 0.8s infinite;
+      animation-direction: alternate;
+    }
+    @keyframes smallPlanet {
+      to {
+        transform: translateX(30px);
+      }
+    }
+    
+  
+    &__dark-planet {
+      position: absolute;
+      top: 461px;
+      left: 317px;
+      animation: darkPlanet 6s ease-in-out infinite;
+      animation-direction: alternate;
+      }
+      @keyframes darkPlanet {
+          to {
+              transform: rotate(-45deg);
+          }
+      }
+
+    &__atom {
+      position: absolute;
+      top: 132px;
+      left: 75px;
+      animation: atom 12s cubic-bezier(0.1, 1, 1, 0.1) infinite;
+            transform: scale(0);
+        }
+        @keyframes atom {
+            50% {
+                transform: scale(100%) rotate(45deg);
+            }
+            100% {
+                transform: scale(0) rotate(90deg);
+            }
+        }
+  
+    &__number-0 {
+      position: absolute;
+      top: 270px;
+      right: 140px;
+    }
+  
+    &__number-1 {
+      position: absolute;
+      top: 216px;
+      right: 45px;
+    }
+  
+    &__division {
+      position: absolute;
+      top: 185px;
+      left: 515px;
+      animation: division 12s ease-in-out infinite;
+      opacity: 0;
+      }
+      @keyframes division {
+          25% {
+              opacity: 1;
+              transform: scale(150%);
+          }
+          50% {
+              opacity: 0;
+              transform: scale(170%);
+          }
+          100% {
+              opacity: 0;
+              transform: scale(170%);
+          }
+      }
+
+    &__plus {
+      position: absolute;
+      top: 241px;
+      left: 432px;
+      animation: plus 15s 6s ease-in-out infinite;
+      opacity: 0;
+    }
+    @keyframes plus {
+        20% {
+            transform: scale(150%);
+            opacity: 1;
+        }
+        40% {
+            transform: scale(150%);
+            opacity: 1;
+        }
+        60% {
+            transform: scale(170%);
+            opacity: 0;
+        }
+        100% {
+            transform: scale(170%);
+            opacity: 0;
+        }
+    }
+
+    &__palette {
+      position: absolute;
+      top: 119px;
+      right: 71px;
+      animation: palette 12s ease-in-out 3s infinite;
+    }
+    @keyframes palette {
+        70% {
+            transform: rotate(360deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    &__rocket {
+      position: absolute;
+      top: 423px;
+      left: 88px;
+      animation: rocket 12s ease infinite;
+    }
+    @keyframes rocket {
+        67% {
+            transform: translateY(-60px);
+        }
+        100% {
+            transform: translateY(0);
+        }
+    }
+
+  
+    &__balloon {
+      position: absolute;
+      top: 262px;
+      left: 354px;
+      animation: balloon 6s ease-in-out infinite;
+      animation-direction: alternate;
+    }
+    @keyframes balloon {
+        to {
+            transform: translateY(34px);
+        }
+    }
+
+    &__child-container {
+      position: relative;
+      top: 473px;
+      left: 370px;
+      max-width: 276px;
+    }
+  
+    &__child {
+      position: absolute;
+    }
+  
+    &__pencil {
+      position: absolute;
+      top: 155px;
+      left: 42px;
+      z-index: -1;
+      animation: pencil 4.5s cubic-bezier(0.45, -0.67, 0.53, 1.62) infinite;
+      animation-direction: alternate;
+    }
+    @keyframes pencil {
+        33% {
+            transform: rotate(24deg);
+        }
+        66% {
+            transform: rotate(66deg);
+        }
+        100% {
+            transform: rotate(72deg);
+        }
+    }
+  
+    &__paper-airplanes {
+      position: absolute;
+      top: 716px;
+      right: 525px;
+    }
+  }

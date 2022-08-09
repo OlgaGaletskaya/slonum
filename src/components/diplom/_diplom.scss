@@ -1,0 +1,14 @@
+.diplom{
+    &__inner{
+        @include flex($fd:column, $jc:center);
+        gap: 20px;
+        height: 100%;
+    }
+    &__cont{
+        width: 497px;
+        @include mainFont(400, 18px, 150%, 0.05em);
+        color: $additionalColor;
+        @include flex($fd:column);
+        gap: 20px;
+        }
+}

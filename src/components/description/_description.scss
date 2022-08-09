@@ -1,0 +1,15 @@
+.description {
+
+    @include mainFont(400, 22px, 150%,  0.05em);
+    text-align: center;    
+    color: $mainColor;
+    width: 790px;
+    margin: 0 auto;
+    & span{
+        font-weight: 700;
+    }
+    &__accent{
+        color: $mainAccentColor;
+    }
+
+}

@@ -1,0 +1,89 @@
+.price {
+    @include card();
+    border: 3px solid $mainAccentColor;
+    padding: 136px 61px 118px 60px;
+    width: 496px;
+    position: relative;
+
+    &__cont{
+        @include flex($fd:column);
+        gap: 30px;
+        @include mainFont(400, 20px, 122%,  0.04em);
+        color: $additionalColor;
+    }
+    &__num{
+        font-size: 96px;
+        line-height: 122%;
+        color: black;
+        position: relative;
+
+    }
+    &__num:after{
+        content: "299₽";
+        @include mainFont(400, 30px, 34px,  0.04em);
+        text-decoration: line-through;
+        position: absolute;
+        right: -87px;
+        top:27px;   
+    }
+    &__footer {
+        background-color: $mainAccentColor;
+        position: absolute;
+        bottom: 0px;    
+        left: 0;
+        width: 100%;
+        padding: 22px;
+        margin: 0 auto;
+        @include flex($jc:space-between, $ai:center);
+        @include headersFont(700, 20px, 28px, 0.04em);
+        color: white;
+        
+    }
+    &__links{
+        @include flex;
+        gap: 20px;
+    }
+    &__act{
+        position: absolute;
+        background-image: url('/public/img/Price.svg');
+        width: 292px;
+        height: 110px;
+        top: -16px;
+        left: 104px;
+        @include flex($jc:center, $ai:center);
+    }
+    &__act p{
+        position: absolute;
+        top: 21px;
+        @include headersFont(700, 20px, 28px, 0.04em);
+        color: white;
+    }
+}
+
+.request {
+    a{
+        color: $mainAccentColor;
+    }
+    &__form{
+        @include flex($fd:column);
+        gap: 50px;
+        color: $additionalColor;
+    }
+    &__items{
+        @include flex($fd:column);
+        gap: 20px;
+    }
+    
+    &__txbx{
+        @include mainFont(400, 20px, 24px, 0.04em);
+        
+        width: 540px;
+        padding: 0px 20px;
+        background: #FFFFFF;
+        border: 1px solid #9FA0A7;
+        border-radius: 15px;
+        padding: 18px 20px;
+
+    }
+    
+}

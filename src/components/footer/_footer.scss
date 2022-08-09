@@ -1,0 +1,36 @@
+.footer{
+    @include flex($fd:column, $ai:center, $jc:center);
+    width: 100%;
+    @include mainFont(400, 20px, 24px, 1);
+    color: $additionalColor;
+    &__inner{
+        @include flex($jc:space-between, $ai:center);
+        width: 100%;
+    }
+    &__links{
+        @include flex($fd:column, $ai:center);
+        gap: 8px;
+
+    }
+    &__slinks{
+        @include flex();
+        gap: 22px;
+
+    }
+    &__nav{
+        @include flex();
+        gap: 40px;
+        a{
+            @include headersFont(700, 20px, 27px, 1);
+            color: $mainColor;
+        }
+    }
+    &__up{
+        background: #FF652F;
+        border-radius: 56px;
+        width: 56px;
+        height: 56px;
+        padding-left: 21px;
+        padding-top: 12px;
+    }
+}

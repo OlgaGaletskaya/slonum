@@ -1,0 +1,39 @@
+.mail{
+    background-image: url('/public/img/sky_bg.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    &__inner{
+        padding-top: 30px;
+        padding-bottom: 67px;
+        @include flex($fd:column, $ai:center);
+        gap: 20px;
+        @include mainFont(400, 18px, 150%, 4%);
+        color: white;
+    }
+    &__title{
+        @include headersFont(700, 32px, 44px, 4%);
+    }
+    &__inner p{
+        width: 406px;
+        text-align: center;
+    }
+    &__form{
+        @include flex($fd:column);
+        gap: 22px;
+    }
+    &__fi{
+        @include flex;
+        gap: 30px;
+        padding-top: 20px;
+    }
+    &__fi input{
+        background: #FFFFFF;
+        border: 1px solid #9FA0A7;
+        border-radius: 15px;
+        padding: 18px 20px;
+        width: 540px;
+    }
+    a{
+        color: white;
+    }
+}

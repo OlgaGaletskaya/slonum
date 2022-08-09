@@ -1,0 +1,32 @@
+.benefits{
+    background-image: url('/public/img/benefits/bg.svg');   
+    background-repeat: no-repeat;
+    background-size: cover;
+    &__inner{
+        @include flex($fd:column, $ai:center);
+        gap: 50px;  
+    }
+
+    &__cont{
+        @include flex($fw:wrap);
+        gap: 30px;
+    }
+    &__item{
+        @include card();
+        width: 445px;
+        height: 170px;
+        padding: 20px 35px 24px;
+        @include flex($fd:col);
+        gap: 8px;
+    }
+    &__img{
+        width: 70px;
+        height: 70px;
+    }
+    &__item{
+        @include flex($fd:column);
+        @include mainFont(400, 20px, 24px, 0.04em);
+        color: $additionalColor;
+        gap: 8px;
+    }
+}

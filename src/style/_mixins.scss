@@ -1,0 +1,12 @@
+@mixin card{
+    background: #FFFFFF;
+    box-shadow: 0px 5px 30px rgba(215, 211, 225, 0.5);
+    border-radius: 16px;
+}
+@mixin flex($jc: flex-start, $ai: flex-start, $fd: row, $fw: nowrap) {
+    display: flex;
+    justify-content: $jc;
+    align-items: $ai;
+    flex-direction: $fd;
+    flex-wrap: $fw;
+}
